@@ -32,6 +32,7 @@
         "maatwebsite/excel": "^3.1",
         "madnest/madzipper": "^1.1",
         "mercadopago/dx-php": "2.4.4",
+        "milon/barcode": "^10.0",
         "nexmo/laravel": "^2.4",
         "paypal/rest-api-sdk-php": "^1.14",
         "rap2hpoutre/fast-excel": "^3.0",

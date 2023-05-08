@@ -1587,4 +1587,11 @@
   'maximum_order_quantity' => 'Maximum order quantity',
   'Points/One' => 'Points/One',
   'Total Points' => 'Total Points',
+  'Turning Visibility off will not show this product in the user app and
+                                website' => 'Turning Visibility off will not show this product in the user app and
+                                website',
+  'Product BarCode' => 'Product BarCode',
+  'select
+                                        attribute' => 'Select
+                                        attribute',
 );

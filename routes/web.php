@@ -42,10 +42,10 @@ Route::group(['prefix' => 'payment-mobile'], function () {
 
 //SSLCOMMERZ Start
 Route::post('sslcommerz/pay', 'SslCommerzPaymentController@index')->name('pay-ssl');
-Route::post('sslcommerz/success','SslCommerzPaymentController@success')->name('ssl-success');
-Route::post('sslcommerz/failure','SslCommerzPaymentController@fail')->name('ssl-failure');
-Route::post('sslcommerz/cancel','SslCommerzPaymentController@cancel')->name('ssl-cancel');
-Route::post('sslcommerz/ipn','SslCommerzPaymentController@ipn')->name('ssl-ipn');
+Route::post('sslcommerz/success', 'SslCommerzPaymentController@success')->name('ssl-success');
+Route::post('sslcommerz/failure', 'SslCommerzPaymentController@fail')->name('ssl-failure');
+Route::post('sslcommerz/cancel', 'SslCommerzPaymentController@cancel')->name('ssl-cancel');
+Route::post('sslcommerz/ipn', 'SslCommerzPaymentController@ipn')->name('ssl-ipn');
 //SSLCOMMERZ END
 
 /*paypal*/
@@ -79,12 +79,12 @@ Route::match(['get', 'post'], '/return-senang-pay', 'SenangPayController@return_
 //paystack
 Route::post('/paystack-pay', 'PaystackController@redirectToGateway')->name('paystack-pay');
 Route::get('/paystack-callback', 'PaystackController@handleGatewayCallback')->name('paystack-callback');
-Route::get('/paystack',function (){
+Route::get('/paystack', function () {
     return view('paystack');
 });
 
 //bkash
-Route::group(['prefix'=>'bkash'], function () {
+Route::group(['prefix' => 'bkash'], function () {
     // Payment Routes for bKash
     Route::post('get-token', 'BkashPaymentController@getToken')->name('bkash-get-token');
     Route::post('create-payment', 'BkashPaymentController@createPayment')->name('bkash-create-payment');
@@ -107,7 +107,7 @@ Route::post('mercadopago/make-payment', 'MercadoPagoController@make_payment')->n
 Route::get('mercadopago/get-user', 'MercadoPagoController@get_test_user')->name('mercadopago.get-user');
 
 // The route that the button calls to initialize payment
-Route::post('/flutterwave-pay','FlutterwaveController@initialize')->name('flutterwave_pay');
+Route::post('/flutterwave-pay', 'FlutterwaveController@initialize')->name('flutterwave_pay');
 // The callback url after a payment
 Route::get('/rave/callback', 'FlutterwaveController@callback')->name('flutterwave_callback');
 
@@ -128,6 +128,6 @@ Route::get('add-currency', function () {
 });
 
 Route::get('/test', function () {
-    \App\CentralLogics\Helpers::setEnvironmentValue('fff','123');
+    \App\CentralLogics\Helpers::setEnvironmentValue('fff', '123');
     return 0;
 });

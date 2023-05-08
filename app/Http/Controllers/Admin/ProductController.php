@@ -163,6 +163,9 @@ class ProductController extends Controller
         $p->maximum_order_quantity = $request->maximum_order_quantity;
         $p->points = $request->points;
 
+        $number_code = mt_rand(1000000000, 9999999999);
+        $p->product_code = $number_code;
+
         $p->name = $request->name[array_search('en', $request->lang)];
 
         $category = [];
